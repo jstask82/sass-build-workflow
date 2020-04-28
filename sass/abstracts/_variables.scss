@@ -1,0 +1,48 @@
+//COLORS
+$clr-primary: hsl(235, 10%, 50%);
+$clr-primary--light: hsl(235, 10%, 65%);;
+$clr-primary--dark: hsl(235, 10%, 35%);
+$clr-secondary: #FFF3DA;
+$clr-tertiary: #00cd28;
+$clr-highlight: #FFDC00;
+$clr-white: #fff;
+$clr-grey: #e5e5e5;
+$clr-black: #1f1f1f;
+
+//FONT, SIZES
+$ff-primary:  Helvetica, Arial, sans-serif;
+$ff-secondary: Georgia, serif;
+$fw-regular: 400;
+$fw-bold: 700;
+$fs-default: 10px; //or 62.5% if Safari does not matter. See https://adamwathan.me/dont-use-em-for-media-queries/
+$fs-xl: 3.6rem;
+$fs-l: 2.8rem;
+$fs-normal: 1.6rem;
+$fs-s: 1.4rem;
+
+$vars: (
+      clr-primary: $clr-primary,
+      clr-primary--light: $clr-primary--light,
+      clr-primary--dark: $clr-primary--dark,
+      clr-secondary: $clr-secondary,
+      clr-tertiary: $clr-tertiary,
+      clr-highlight: $clr-highlight,
+      clr-white: $clr-white,
+      clr-grey: $clr-grey,
+      clr-black: $clr-black,
+      ff-primary: $ff-primary,
+      ff-secondary: $ff-secondary,
+      fw-bold: $fw-bold,
+      fw-regular: $fw-regular,
+      fs-default: $fs-default,
+      fs-xl: $fs-xl,
+      fs-l: $fs-l,
+      fs-normal: $fs-normal,
+      fs-s: $fs-s,
+);
+
+:root {
+      @each $prop, $val in $vars {
+            --#{$prop}: #{$val}
+      }
+}
